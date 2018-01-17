@@ -11,6 +11,21 @@
 }
 /*start heaeder*/
 
+.animate_skils{
+  height: 30px;
+  transition: 0.05s;
+  position: relative;
+  width: 0%;
+  background: green;
+}
+#procenti{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
 header{
   background: #000;
   position:fixed;

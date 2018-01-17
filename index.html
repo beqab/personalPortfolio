@@ -4,18 +4,22 @@
 	<title>corporation</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-3.2.1.js"></script>
 	<script src="js/bootstrap.js"></script>
-
+  <link rel="shortcut icon" type="image/x-icon" href="logo5.png" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<script src="js/jquery-3.2.1.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
   <script src="js/modernizr.custom.97074.js"></script>
 
 </head>
+<div id="loading">
+  <img id="loading-image" src="logo5.png" alt="Loading..." />
+</div>
 <body>
           <!-- =====================
                    header
@@ -88,10 +92,8 @@ Take a look at some of my works, and if you like them, feel free to contact me.<
     <!-- .progressbar -->
        <div class="title"> html/html5</div>
             <div class="progres_bar_animate">
-              <!-- <div class="window_scrole "><div class="progress-bar-percent" data-percentage="88"></div></div> -->
-              <div data-procenti='60'>
-                
-              </div>
+              <div class="window_scrole "><div class="progress-bar-percent" data-percentage="88"></div></div>
+              
 
             </div>
             <div class="title"> css/css3</div>
@@ -301,7 +303,7 @@ $('a[href*="#"]')
 
 
 
-    <script type="text/javascript">
+ <!--    <script type="text/javascript">
       $('.progressbar').each(function() {
     $(this).find('.progressbar-bar').width(0);
 });
@@ -314,6 +316,13 @@ $('.progressbar').each(function() {
 });
 
 
-    </script>
+    </script> -->
+
+    <script language="javascript" type="text/javascript">
+     $(function() {
+     $('#loading').css('display','none');
+  });
+</script>
 </body>
+
 </html>

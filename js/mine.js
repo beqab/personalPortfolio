@@ -115,12 +115,21 @@ $('.progress-bar-percent[data-percentage]').each(function () {
 
       $(window).scroll(function() { 
      
-       if($(window).scrollTop()>1050){
-           test2=false
-          $('.works').css('animationName','works')
+       if($(this).scrollTop()>$('#works').offset().top-($(window).height()/1.5)){
+           $('#da-thumbs li').each(function(i){
+                setTimeout(function(){
+                    $('#da-thumbs li').eq(i).addClass('is_showing')
+
+                }, 250*(i+1));
+
+
+
+          //  test2=false
+          // $('.works').css('animationName','works')
          
           
-            }
+           })
+         }
 
         });
               
@@ -150,20 +159,20 @@ $('.progress-bar-percent[data-percentage]').each(function () {
 
 // =========rogres bar js
 
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 10;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 90) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
-  }
-}
+// function move() {
+//   var elem = document.getElementById("myBar");   
+//   var width = 10;
+//   var id = setInterval(frame, 10);
+//   function frame() {
+//     if (width >= 90) {
+//       clearInterval(id);
+//     } else {
+//       width++; 
+//       elem.style.width = width + '%'; 
+//       elem.innerHTML = width * 1  + '%';
+//     }
+//   }
+// }
 
 
 
@@ -177,45 +186,45 @@ function move() {
 
 
 
-this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
+// this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
   
-  var $el = $( this ),
-    $hoverElem = $el.find( 'div' ),
-    direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
-    styleCSS = self._getStyle( direction );
+//   var $el = $( this ),
+//     $hoverElem = $el.find( 'div' ),
+//     direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
+//     styleCSS = self._getStyle( direction );
   
-  if( event.type === 'mouseenter' ) {
+//   if( event.type === 'mouseenter' ) {
     
-    $hoverElem.hide().css( styleCSS.from );
-    clearTimeout( self.tmhover );
+//     $hoverElem.hide().css( styleCSS.from );
+//     clearTimeout( self.tmhover );
 
-    self.tmhover = setTimeout( function() {
+//     self.tmhover = setTimeout( function() {
       
-      $hoverElem.show( 0, function() {
+//       $hoverElem.show( 0, function() {
         
-        var $el = $( this );
-        if( self.support ) {
-          $el.css( 'transition', self.transitionProp );
-        }
-        self._applyAnimation( $el, styleCSS.to, self.options.speed );
+//         var $el = $( this );
+//         if( self.support ) {
+//           $el.css( 'transition', self.transitionProp );
+//         }
+//         self._applyAnimation( $el, styleCSS.to, self.options.speed );
 
-      } );
+//       } );
       
     
-    }, self.options.hoverDelay );
+//     }, self.options.hoverDelay );
     
-  }
-  else {
+//   }
+//   else {
   
-    if( self.support ) {
-      $hoverElem.css( 'transition', self.transitionProp );
-    }
-    clearTimeout( self.tmhover );
-    self._applyAnimation( $hoverElem, styleCSS.from, self.options.speed );
+//     if( self.support ) {
+//       $hoverElem.css( 'transition', self.transitionProp );
+//     }
+//     clearTimeout( self.tmhover );
+//     self._applyAnimation( $hoverElem, styleCSS.from, self.options.speed );
     
-  }
+//   }
     
-} );
+// } );
 
 
 // nw progres
