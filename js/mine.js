@@ -38,6 +38,10 @@ linkify( '.nav_a' );
              console.log(testb3);
                 //$(".navbar_togle > i:first-child").css('zIndex', '100');
            }
+
+           if($('header').attr('class') && $('.navbar_togle>i').attr('class')=='fa fa-bars index'){
+              $(".navbar_togle i").toggleClass("index");
+           }
          
          
 
@@ -121,13 +125,6 @@ $('.progress-bar-percent[data-percentage]').each(function () {
                     $('#da-thumbs li').eq(i).addClass('is_showing')
 
                 }, 250*(i+1));
-
-
-
-          //  test2=false
-          // $('.works').css('animationName','works')
-         
-          
            })
          }
 
@@ -149,8 +146,11 @@ $('.progress-bar-percent[data-percentage]').each(function () {
 
        $(".navbar_togle").click(function(){
         $(".navbar_togle>i").toggleClass("index");
-          testb3=true;
+          
     });
+
+       
+       console.log($('.navbar_togle>i').attr('class'))
 
 
 
@@ -229,8 +229,4 @@ $('.progress-bar-percent[data-percentage]').each(function () {
 
 // nw progres
 
-$('.progres_bar_animate > div').each(function(){
 
-   
-
-})
