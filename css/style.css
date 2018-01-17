@@ -180,8 +180,8 @@ header .top_contacts li a:hover:after {
   text-transform: uppercase;
   top: 100px;
     left: 50%;
-  transform: translate(-128px,0px);
-  -webkit-transform: translate(-128px,0px);
+  transform: translate(-50%,0px);
+  -webkit-transform: translate(-50%,0px);
   animation-name: hello;
   -webkit-animation-name: hello;
 
@@ -200,8 +200,8 @@ height: 100%;
    color: #fff;
    top: 300px;
    left: 50%;
-   transform: translateX(-300px);
-   -webkit-transform: translateX(-300px);
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
    font-size: 20px;
    font-weight: bold;/*
    animation-name: headerp;
@@ -217,8 +217,8 @@ height: 100%;
    text-transform: capitalize;
    color: #fff;
    left: 50%;
-   -webkit-transform: translate(-170px, 0px);
-   transform: translate(-170px, 0px);
+   -webkit-transform: translate(-50%, 0px);
+   transform: translate(-50%, 0px);
    -webkit-animation-name: name;
    animation-name: name;
    -webkit-animation-duration: 2s;
@@ -376,7 +376,7 @@ height: 100%;
 /*images*/
 .da-thumbs {
   list-style: none;
-  width: 969px;
+  max-width: 969px;
   height: 600px;
   position: relative;
   margin: 20px auto;
@@ -537,6 +537,7 @@ height: 100%;
    border-radius: 3px;
    box-shadow: 2px 2px 7px #4d5d4d;
    font-family: raleway;
+   width: 100%;
 }
 .contct_form form button{
   border: 2px solid #000;
@@ -561,10 +562,20 @@ height: 100%;
   text-align: center;
   margin-top: 20px;
 }
-.contct_form form textarea{border: 2px solid #000;padding: 10px;margin-bottom:10px;border-radius: 3px;box-shadow: 2px 2px 7px #4d5d4d;height: 124px;resize: none;font-family: raleway;}
+.contct_form form textarea{
+  border: 2px solid #000;
+  padding: 10px;margin-bottom:10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 7px #4d5d4d;
+  height: 124px;
+  resize: none;
+  font-family: raleway;
+    width: 100%;
+}
 footer{
   background: #f5f5f5;
   border-top: 2px solid #666;
+
   margin-top: 170px;
   position: relative
   
@@ -707,4 +718,35 @@ footer div{
   animation-duration: 4s;
 }
 
+/*///////////////*/
+
+@media only screen and (max-width: 992px) {
+
+  .header .top_contacts{
+    display: none;
+  }
+
+
+
+}
+@media only screen and (max-width: 700px) {
+ .home_section .blar .name{
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 631px) {
+  header nav ul li a{
+    font-size: 14px;
+  }
+  .roll span{
+    padding: 0px 13px;
+  }
+  .menu_ul{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+ .home_section .blar .name{
+    font-size: 53px;
+  }
+}
 

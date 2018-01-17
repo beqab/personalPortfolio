@@ -307,9 +307,7 @@ header{
     left: 0;
   }
 }
-#about{
-  height: 870px;
-}
+
 #about .about{
   animation-name: about;
   animation-duration: 1.5s;
@@ -330,9 +328,7 @@ header{
   }
 }
 
-#works{
-  height: 700px;
-}
+
 .works{
   animation-name: work;
   animation-duration: 2s;
@@ -342,11 +338,11 @@ header{
 #da-thumbs li{
   opacity: 0;
   transform: translateY(30px);
-  transition: 1s;
+  transition: 0.7s;
   transform: scale(0,0);
 }
 #da-thumbs li.is_showing{
-  opacity: 0.7;
+  opacity: 1;
   transform: translateY(0px);
   transform: scale(1,1);
 }

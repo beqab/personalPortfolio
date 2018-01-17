@@ -124,7 +124,7 @@ $('.progress-bar-percent[data-percentage]').each(function () {
                 setTimeout(function(){
                     $('#da-thumbs li').eq(i).addClass('is_showing')
 
-                }, 250*(i+1));
+                }, 200*(i+1));
            })
          }
 
